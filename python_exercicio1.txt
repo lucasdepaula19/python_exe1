@@ -1,0 +1,89 @@
+
+Um conjunto (set) é um tipo de dados de coleção, suportando o operador de associação in, a função len() e é iterável. Conjuntos não possuem noção de ordem por isso seus elementos não podem ser acessados com colchetes [] nem podem ser fatiados.
+
+Os conjuntos (set) não aceitam valores repetidos ao tentar criar um conjunto com valores repetidos eles serão descartados só sobrando um valor do mesmo.
+
+Ex:
+>>> li = ['Maçã', 'Laranja', 'Uva', 'Abacaxi', 'Maçã', 'Abacate', 'Laranja']
+>>> c = set(li)
+>>> print(c)
+{'Laranja', 'Uva', 'Abacaxi', 'Abacate', 'Maçã'}
+>>> 
+
+
+Tuple:
+
+Tupla é uma Lista imutável. O que diferencia a Estrutura de Dados Lista da Estrutura de Dados Tupla é que a primeira pode ter elementos adicionados a qualquer momento, enquanto que a segunda estrutura, após definida, não permite a adição ou remoção de elementos.
+
+Uma Tupla é definida da mesma forma que uma lista, o que as diferencias, são os caracteres que as delimitam. Uma Lista, tem seus elementos delimitados por colchetes, enquanto que a Tupla, tem seus elementos delimitados por parêntesis.
+
+A ordem dos elementos numa Tupla será a ordem na qual estes foram definidos, ou seja, não é possível ordenar em tempo de execução os elementos.
+
+O primeiro elemento de uma Tupla também possui índice igual a 0 e o último índice igual a -1. Assim o acesso a elementos, bem como o fatiamentos funciona da mesma forma como já estudado no fatiamento de Listas.
+
+Ex:
+>>> t = ("x", "y", 10, 20, "c")
+
+-----------------------
+
+Stack
+As pilhas são baseadas no princípio LIFO, ou seja, o elemento inserido no final, é o primeiro a sair da lista.
+A inserção e exclusão nas pilhas ocorrem apenas em uma extremidade da lista chamada de topo.
+A operação de inserção é chamada de operação push.
+A operação de exclusão é chamada de operação pop.
+
+pilha = [1, 1, 2, 3, 5]
+print("Pilha: ", pilha)
+Pilha:  [1, 1, 2, 3, 5]
+
+pilha.append(8)
+print("Inserindo um elemento: ", pilha)
+Inserindo um elemento:  [1, 1, 2, 3, 5, 8]
+
+pilha.append(13)
+print("Inserindo outro elemento: ", pilha)
+Inserindo outro elemento:  [1, 1, 2, 3, 5, 8, 13]
+
+pilha.pop()
+print("Removendo um elemento: ", pilha)
+Removendo um elemento:  [1, 1, 2, 3, 5, 8]
+
+pilha.pop()
+print("Removendo outro elemento: ", pilha)
+Removendo outro elemento:  [1, 1, 2, 3, 5]
+
+
+filas
+As filas são baseadas no princípio FIFO, ou seja, o elemento inserido no primeiro, é o primeiro a sair da lista.
+A inserção e exclusão nas filas ocorrem nas extremidades opostas da lista. A inserção ocorre na parte traseira da lista e a exclusão ocorre na frente da lista.
+
+>>> fila = [10, 20, 30, 40, 50]
+>>> fila.append(60)  # insere um elemento no final da fila
+>>> print fila
+[10, 20, 30, 40, 50, 60]
+>>> print fila.pop(0) # remove o primeiro elemento da lista
+10
+>>> print fila
+[20, 30, 40, 50, 60]
+>>> print fila.pop(0) # remove o primeiro elemento da lista
+20
+>>> print fila
+[30, 40, 50, 60]
+>>> print fila.pop(0) # remove o primeiro elemento da lista
+30
+>>> print fila
+[40, 50, 60]
+
+-----------------------
+
+O que o statement else faz em um loop (note que o 'else' está identado com o 'for')?
+
+for n in range(2,10):
+    for x in range(2,n):
+        if n % x == 0:
+            print(n,‘equals’, x, ’*’, n//x)
+            break
+    else:
+        print(n, ‘is a prime number’) 
+
+Por estar identado com o "for", o objetivo do "else" neste caso é controlar o número de vezes que o loop foi executado. Quando o break for executado, o "else" não será acionado.
